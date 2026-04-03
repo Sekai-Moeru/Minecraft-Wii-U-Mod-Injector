@@ -1,81 +1,59 @@
-﻿using System.Windows.Forms;
-using MetroFramework;
+﻿using System.Threading.Tasks;
+using Avalonia.Controls;
 
 namespace Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms
 {
     internal class Messaging
     {
-        public static MainForm Owner = new MainForm();
+        public static Window? Owner { get; set; }
 
-        public Messaging(MainForm owner)
-        {
-            Owner = owner;
-        }
+        public enum MessageType { Info, Error, Warning, Success, None }
 
-        public static void Show(string message)
-        {
-            FlexibleMessageBox.Show(message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
+        public static async Task Show(string message)
+            => await ShowDialog(message, "", MessageType.Info);
 
-        public static void Show(string message, string caption)
-        {
-            FlexibleMessageBox.Show(message, Application.ProductName + caption, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
+        public static async Task Show(string message, string caption)
+            => await ShowDialog(message, caption, MessageType.Info);
 
-        public static void ShowMetro(string message, string caption, MetroColorStyle color)
+        public static async Task Show(MessageType type, string message)
+            => await ShowDialog(message, "", type);
+
+        public static async Task<bool> ShowConfirm(string message)
+            => await ShowDialogConfirm(message, "");
+
+        private static async Task ShowDialog(string message, string caption, MessageType type)
         {
-            switch (color)
+            var dialog = new Window
             {
-                case MetroColorStyle.Blue:
-                case MetroColorStyle.Default:
-                case MetroColorStyle.Teal:
-                    MetroMessageBox.Show(Owner, message, Application.ProductName + caption, MessageBoxButtons.OK,
-                        MessageBoxIcon.Asterisk);
-                    break;
-                case MetroColorStyle.Red:
-                case MetroColorStyle.Magenta:
-                case MetroColorStyle.Pink:
-                case MetroColorStyle.Purple:
-                    MetroMessageBox.Show(Owner, message, Application.ProductName + caption, MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                    break;
-                case MetroColorStyle.Orange:
-                case MetroColorStyle.Yellow:
-                    MetroMessageBox.Show(Owner, message, Application.ProductName + caption, MessageBoxButtons.OK,
-                        MessageBoxIcon.Exclamation);
-                    break;
-                case MetroColorStyle.Green:
-                case MetroColorStyle.Lime:
-                    MetroMessageBox.Show(Owner, message, Application.ProductName + caption, MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    break;
-                case MetroColorStyle.White:
-                case MetroColorStyle.Black:
-                case MetroColorStyle.Brown:
-                case MetroColorStyle.Silver:
-                    MetroMessageBox.Show(Owner, message, Application.ProductName + caption, MessageBoxButtons.OK,
-                        MessageBoxIcon.None);
-                    break;
-            }
+                Title = "Minecraft Wii U Mod Injector" + (caption != "" ? " - " + caption : ""),
+                Width = 400,
+                Height = 180,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                CanResize = false,
+                Content = new Avalonia.Controls.TextBlock
+                {
+                    Text = message,
+                    Margin = new Avalonia.Thickness(20),
+                    TextWrapping = Avalonia.Media.TextWrapping.Wrap
+                }
+            };
+            await dialog.ShowDialog(Owner);
         }
 
-        public static void Show(MessageBoxIcon icon, string message)
+        private static async Task<bool> ShowDialogConfirm(string message, string caption)
         {
-            FlexibleMessageBox.Show(message, Application.ProductName, MessageBoxButtons.OK, icon);
-        }
-
-        public static void Show(MessageBoxIcon icon, MessageBoxButtons btns, string message)
-        {
-            FlexibleMessageBox.Show(message, Application.ProductName, btns, icon);
-        }
-
-        public static DialogResult Show(string message, MessageBoxButtons btns)
-        {
-            return FlexibleMessageBox.Show(message, Application.ProductName, btns, MessageBoxIcon.Question);
-        }
-        public static DialogResult Show(string message, MessageBoxButtons btns, MessageBoxIcon icon)
-        {
-            return FlexibleMessageBox.Show(message, Application.ProductName, btns, icon);
+            var result = false;
+            var dialog = new Window
+            {
+                Title = "Minecraft Wii U Mod Injector" + (caption != "" ? " - " + caption : ""),
+                Width = 400,
+                Height = 180,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                CanResize = false
+            };
+            // simple confirm — we'll wire up OK/Cancel buttons when we hit a form that uses it
+            await dialog.ShowDialog(Owner);
+            return result;
         }
     }
 }
