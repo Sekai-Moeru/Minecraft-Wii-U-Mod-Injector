@@ -10,7 +10,7 @@ public class GeckoU
 {
     // TODO:
     // Clean up left over TCPGecko dotNet code that no longer works/unused
-    // Clean Up any unused and left over code that we don't need for the Mod Injector
+    // Clean Up any unused and left over code that i don't need for the Mod Injector
     // Not really important, but it would be nice to have a "feature complete" version of Gecko U that can be hosted as it's own repository for others to use
     // More descriptive summaries for methods
 
