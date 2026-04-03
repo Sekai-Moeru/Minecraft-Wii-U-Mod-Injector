@@ -51,7 +51,7 @@ namespace Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
                 CanResize = false
             };
-            // simple confirm — we'll wire up OK/Cancel buttons when we hit a form that uses it
+            // i have no idea whats going on here, this is 100% from docs. i'll hook up OK and Cancel buttons when something hits a form that uses it
             await dialog.ShowDialog(Owner);
             return result;
         }
