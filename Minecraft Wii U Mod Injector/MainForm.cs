@@ -1,6 +1,4 @@
 ﻿using MetroFramework.Controls;
-using MetroFramework.Forms;
-using MetroFramework;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms;
 using Minecraft_Wii_U_Mod_Injector.Forms;
@@ -10,17 +8,15 @@ using Minecraft_Wii_U_Mod_Injector.Properties;
 using Minecraft_Wii_U_Mod_Injector.Wii_U.Gecko_U;
 using Minecraft_Wii_U_Mod_Injector.Wii_U.Minecraft;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using static System.Windows.Forms.DialogResult;
 
 namespace Minecraft_Wii_U_Mod_Injector {
-    public partial class MainForm : MetroForm {
+    public partial class MainForm : Avalonia.Controls.Window {
         #region Local Variables
 
         #region References

@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
-using MetroFramework;
-using MetroFramework.Controls;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Files;
 using Minecraft_Wii_U_Mod_Injector.Properties;
@@ -18,7 +12,7 @@ namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods;
 // TODO:
 // Clean Up the whole skins & cape switcher bullshit, I hate everything about it with a burning passion :3c
 // Clear out all controls when switching player indexes
-public partial class SessionManager : MetroForm
+public partial class SessionManager : Avalonia.Controls.Window
 {
     private readonly MainForm _iw;
 

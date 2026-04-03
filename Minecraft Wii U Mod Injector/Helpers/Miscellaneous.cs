@@ -1,9 +1,6 @@
 ﻿using System;
-using MetroFramework.Controls;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
-using MetroFramework;
 
 namespace Minecraft_Wii_U_Mod_Injector.Helpers
 {

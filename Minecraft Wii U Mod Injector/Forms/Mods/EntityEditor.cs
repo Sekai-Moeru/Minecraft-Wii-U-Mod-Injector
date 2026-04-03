@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods
 {
-    public partial class EntityEditor : MetroForm
+    public partial class EntityEditor : Avalonia.Controls.Window
     {
         private readonly Dictionary<string, uint> _Entities = new()
         {

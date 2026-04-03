@@ -1,6 +1,5 @@
 ﻿using DiscordRPC;
 using System;
-using System.Diagnostics;
 
 namespace Minecraft_Wii_U_Mod_Injector.Helpers
 {

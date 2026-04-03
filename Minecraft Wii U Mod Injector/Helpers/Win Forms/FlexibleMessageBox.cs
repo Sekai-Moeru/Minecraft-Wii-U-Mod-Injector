@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Windows.Forms;
-using MetroFramework.Controls;
 
 namespace Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms
 {
@@ -178,7 +175,7 @@ namespace Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms
         /// The form to show the customized message box.
         /// It is defined as an internal class to keep the public interface of the FlexibleMessageBox clean.
         /// </summary>
-        class FlexibleMessageBoxForm : Form
+        class FlexibleMessageBoxForm : Avalonia.Controls.Window
         {
             #region Form-Designer generated code
 

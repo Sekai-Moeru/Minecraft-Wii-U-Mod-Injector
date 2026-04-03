@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Graveyard
@@ -8,7 +6,7 @@ namespace Minecraft_Wii_U_Mod_Injector.Forms.Graveyard
     // TODO 
     // When this eventually gets incorperated into the Entity Editor, I want to make this work like the entity swapper.
     // Also from looking at this code, I don't feel like a lot of these work cause the values seem to be incorrect and point to the wrong addresses... :))))
-    public partial class LootTableEditor : MetroForm
+    public partial class LootTableEditor : Avalonia.Controls.Window
     {
         //These are entity loot tables values/address organized by the first letter of their name (Bat, Blaze etc etc) so DONT change these unless you're adding more
 

@@ -1,9 +1,8 @@
 ﻿using MetroFramework.Forms;
-using System.Windows.Forms;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms
 {
-    public partial class Faq : MetroForm
+    public partial class Faq : Avalonia.Controls.Window
     {
         public Faq(MainForm injector)
         {

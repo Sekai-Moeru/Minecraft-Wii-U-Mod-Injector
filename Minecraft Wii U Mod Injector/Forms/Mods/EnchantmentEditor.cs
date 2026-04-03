@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods
 {
-    public partial class EnchantmentEditor : MetroForm
+    public partial class EnchantmentEditor : Avalonia.Controls.Window
     {
         public EnchantmentEditor(MainForm injector)
         {

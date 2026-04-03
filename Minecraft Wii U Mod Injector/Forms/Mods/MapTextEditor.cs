@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Files;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods
 {
-    public partial class MapTextEditor : MetroForm
+    public partial class MapTextEditor : Avalonia.Controls.Window
     {
         private readonly IniFile _savedData = new(Application.StartupPath + @"\Saved\Data\Minecraft.Wii.U.Mod.Injector.Data.ini");
         private readonly string _savedDataDir = Application.StartupPath + @"\Saved\Data\";

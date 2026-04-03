@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
-using MetroFramework.Controls;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Files;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms;
 using Minecraft_Wii_U_Mod_Injector.Properties;
-using Application = System.Windows.Forms.Application;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Managers
 {
@@ -19,7 +14,7 @@ namespace Minecraft_Wii_U_Mod_Injector.Forms.Managers
     I wrote alot of this while on basically no sleep, this could all use a clean up and use ALOT of improvements so if anyone is up to do that,
     feel free to :) - Kiera
     */
-    public partial class QuickModsMngr : MetroForm
+    public partial class QuickModsMngr : Avalonia.Controls.Window
     {
         #region references
 

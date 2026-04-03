@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Text;
-using System.Windows.Forms;
-using MetroFramework.Controls;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Wii_U.Gecko_U;
 using Minecraft_Wii_U_Mod_Injector.Wii_U.Minecraft;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods
 {
-    public partial class DLCManager : MetroForm
+    public partial class DLCManager : Avalonia.Controls.Window
     {
         public DLCManager(MainForm form)
         {

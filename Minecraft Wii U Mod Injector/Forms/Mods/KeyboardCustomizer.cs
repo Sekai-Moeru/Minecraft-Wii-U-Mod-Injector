@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Text;
-using MetroFramework.Controls;
-using MetroFramework.Forms;
-using System.Windows.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods {
-    public partial class KeyboardCustomizer : MetroForm {
+    public partial class KeyboardCustomizer : Avalonia.Controls.Window {
         public KeyboardCustomizer(MainForm form) {
             InitializeComponent();
             StyleMngr.Style = Style = form.StyleMngr.Style;

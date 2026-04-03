@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms.Mods
 {
-    public partial class NnidEditor : MetroForm
+    public partial class NnidEditor : Avalonia.Controls.Window
     {
         public uint NnidNameAddress = MainForm.GeckoU.PeekUInt(0x10AD1C58) + 0x50;
         public NnidEditor(MainForm injector)

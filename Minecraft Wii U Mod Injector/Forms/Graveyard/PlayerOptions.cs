@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using MetroFramework.Controls;
-using MetroFramework.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Files;
 
@@ -13,7 +10,7 @@ namespace Minecraft_Wii_U_Mod_Injector.Forms.Graveyard
     // WARNING:
     // This whole window will be removed at some point, I'm just going to keep this here for now until all the options have been transfered over to the new
     // "Session Manager" window which has it's own Player Options tab for each individual player. With the exception of a few like the Information panel
-    public partial class PlayerOptions : MetroForm
+    public partial class PlayerOptions : Avalonia.Controls.Window
     {
         private readonly IniFile _savedData = new(Application.StartupPath + @"\Saved\Data\Minecraft.Wii.U.Mod.Injector.Data.ini");
         private readonly string _savedDataDir = Application.StartupPath + @"\Saved\Data\";

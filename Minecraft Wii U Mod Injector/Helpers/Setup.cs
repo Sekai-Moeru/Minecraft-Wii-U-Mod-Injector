@@ -4,9 +4,6 @@ using System.Threading.Tasks;
 using Minecraft_Wii_U_Mod_Injector.Helpers.Win_Forms;
 using Minecraft_Wii_U_Mod_Injector.Properties;
 using System.Net;
-using System.Windows.Forms;
-using System.Diagnostics;
-using Application = System.Windows.Forms.Application;
 
 namespace Minecraft_Wii_U_Mod_Injector.Helpers
 {

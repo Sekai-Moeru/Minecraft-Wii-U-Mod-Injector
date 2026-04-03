@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MetroFramework.Controls;
-using System.Windows.Forms;
 using Minecraft_Wii_U_Mod_Injector.Helpers;
 using Minecraft_Wii_U_Mod_Injector.Wii_U.Gecko_U;
 using Minecraft_Wii_U_Mod_Injector.Wii_U.Minecraft;

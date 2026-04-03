@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace Minecraft_Wii_U_Mod_Injector.Forms {
-    public partial class Credits : MetroForm {
+    public partial class Credits : Avalonia.Controls.Window {
         public Credits(MainForm injector) {
             InitializeComponent();
             StyleMngr.Style = this.Style = injector.StyleMngr.Style;
